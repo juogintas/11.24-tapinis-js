@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Market place</h1>
+    </header>
+    <main class="input-wrapper">
+      <input id="input-name" placeholder="Name" type="text" />
+      <input id="input-description" placeholder="Description" type="text" />
+      <input id="input-price" placeholder="Price" type="number" />
+      <input id="input-photo-url" placeholder="Photo_url" type="text" />
+      <input id="input-location" placeholder="Location" type="text" />
+      <button id="submit-btn">Add</button>
+      <div id="success-message" class="success-message"></div>
+    </main>
+
+    <article class="add-card">
+      <div class="add-card-wrapper">
+        <button id="back-btn">Go back</button>
+      </div>
+    </article>
+
+    <script src="addItem.js"></script>
+  </body>
+</html>
