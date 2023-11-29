@@ -8,13 +8,11 @@ const submitBtn = document.getElementById("submit-btn");
 const successMessage = document.getElementById("success-message");
 
 const addItem = async () => {
-  const item = {
-    Name: inputName.value,
-    Description: inputDescription.value,
-    Price: inputPrice.value,
-    PhotoUrl: inputPhotoUrl.value,
-    Location: inputLocation.value,
-  };
+  const itemName = inputName.value;
+  const itemDescription = inputDescription.value;
+  const itemPrice = inputPrice.value;
+  const itemPhotoUrl = inputPhotoUrl.value;
+  const itemLocation = inputLocation.value;
 
   if (
     !itemName ||
@@ -26,6 +24,14 @@ const addItem = async () => {
     alert("Please fill in all fields");
     return;
   }
+
+  const item = {
+    Name: itemName,
+    Description: itemDescription,
+    Price: itemPrice,
+    PhotoUrl: itemPhotoUrl,
+    Location: itemLocation,
+  };
 
   try {
     const response = await fetch(
@@ -44,6 +50,15 @@ const addItem = async () => {
   }
 
   successMessage.textContent = "card added";
+
+  setTimeout(() => {
+    successMessage.textContent = "";
+    inputName.value = "";
+    inputDescription.value = "";
+    inputPrice.value = "";
+    inputPhotoUrl.value = "";
+    inputLocation.value = "";
+  }, 4000);
 };
 
 submitBtn.addEventListener("click", addItem);

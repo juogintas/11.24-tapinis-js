@@ -1,6 +1,7 @@
 body {
   background-color: rgb(233, 222, 208);
   margin: 0;
+  font-family: "Josefin Sans";
 }
 
 header {
@@ -61,10 +62,11 @@ header {
 
   & button {
     height: 25px;
-    background-color: rgb(140, 78, 78);
+    background-color: rgb(172, 206, 122);
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    border: none;
   }
 }
 
@@ -119,6 +121,14 @@ header {
     border: none;
     border-radius: 3px;
   }
+}
+
+#delete-btn {
+  background-color: rgb(209, 35, 35);
+}
+
+.success-message {
+  color: green;
 }
 
 @media (max-width: 1250px) {
