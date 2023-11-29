@@ -16,6 +16,17 @@ const addItem = async () => {
     Location: inputLocation.value,
   };
 
+  if (
+    !itemName ||
+    !itemDescription ||
+    !itemPrice ||
+    !itemPhotoUrl ||
+    !itemLocation
+  ) {
+    alert("Please fill in all fields");
+    return;
+  }
+
   try {
     const response = await fetch(
       "https://655ceb7d25b76d9884fe295d.mockapi.io/items",
