@@ -5,59 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
     <!DOCTYPE html>
     <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <link rel="stylesheet" href="./style.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Poppins&display=swap"
-          rel="stylesheet"
-        />
-      </head>
       <body>
         <header>
           <h1>Market place</h1>
         </header>
-        <main>
-          <div id="main-wrapper" class="main-wrapper"></div>
+        <main class="input-wrapper">
+          <input id="input-name" placeholder="Name" type="text" />
+          <input id="input-description" placeholder="Description" type="text" />
+          <input id="input-price" placeholder="Price" type="number" />
+          <input id="input-photo-url" placeholder="Photo_url" type="text" />
+          <input id="input-location" placeholder="Location" type="text" />
+          <button id="submit-btn">Add</button>
+          <div id="success-message" class="success-message"></div>
         </main>
 
         <article class="add-card">
           <div class="add-card-wrapper">
-            <h3>Add Card</h3>
-            <button id="add-Item">Click Me!!!</button>
+            <button id="back-btn">Go back</button>
           </div>
         </article>
 
-        <script src="script.js"></script>
+        <script src="addItem.js"></script>
       </body>
     </html>
   </head>
-  <body>
-    <header>
-      <h1>Market place</h1>
-    </header>
-    <main class="input-wrapper">
-      <input id="input-name" placeholder="Name" type="text" />
-      <input id="input-description" placeholder="Description" type="text" />
-      <input id="input-price" placeholder="Price" type="number" />
-      <input id="input-photo-url" placeholder="Photo_url" type="text" />
-      <input id="input-location" placeholder="Location" type="text" />
-      <button id="submit-btn">Add</button>
-      <div id="success-message" class="success-message"></div>
-    </main>
-
-    <article class="add-card">
-      <div class="add-card-wrapper">
-        <button id="back-btn">Go back</button>
-      </div>
-    </article>
-
-    <script src="addItem.js"></script>
-  </body>
 </html>

@@ -8,18 +8,18 @@ const submitBtn = document.getElementById("submit-btn");
 const successMessage = document.getElementById("success-message");
 
 const addItem = async () => {
-  const itemName = inputName.value;
-  const itemDescription = inputDescription.value;
-  const itemPrice = inputPrice.value;
-  const itemPhotoUrl = inputPhotoUrl.value;
-  const itemLocation = inputLocation.value;
+  const itemName = inputName;
+  const itemDescription = inputDescription;
+  const itemPrice = inputPrice;
+  const itemPhotoUrl = inputPhotoUrl;
+  const itemLocation = inputLocation;
 
   if (
-    !itemName ||
-    !itemDescription ||
-    !itemPrice ||
-    !itemPhotoUrl ||
-    !itemLocation
+    !itemName.value ||
+    !itemDescription.value ||
+    !itemPrice.value ||
+    !itemPhotoUrl.value ||
+    !itemLocation.value
   ) {
     alert("Please fill in all fields");
     return;
